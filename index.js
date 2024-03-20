@@ -2,7 +2,7 @@ import { MACSKALISTA } from "./adat.js";
 import { kartyaOsszeallit } from "./fuggvenyek.js";
 
 const KIVALASZTOTTAK=[]
-
+let db=0
 const nevELEM=document.getElementsByClassName("nev")
 
 const tartalomELEM=document.getElementsByClassName("tartalom")
@@ -21,18 +21,16 @@ for (let index = 0; index < kartyaELEM.length; index++) {
             KIVALASZTOTTAK.push(MACSKALISTA[index].nev)
         }console.log(KIVALASZTOTTAK)
         felsorolasKivalasztottak(KIVALASZTOTTAK)
-        if(KIVALASZTOTTAK.includes(MACSKALISTA[index].nev)){
-            vanEMar()
-        }
+        //if(KIVALASZTOTTAK.includes(MACSKALISTA[index].nev)){
+        //    db+=1
+        //   nevELEM[index].innerHTML+=`${db}`
+        //}
     })
 
    
 
 }
 
-function vanEMar(){
-    nevELEM[0].innerHTML+="(1)"
-}
 
 const kivalasztottakELEM=document.getElementsByClassName("kivalasztott")
 
